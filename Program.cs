@@ -4,7 +4,7 @@ using Library.Infrastructure.Data;
 using Library.Infrastructure.Repositories;
 using Library.Repositories;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
