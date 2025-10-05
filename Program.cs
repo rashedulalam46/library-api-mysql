@@ -4,14 +4,18 @@ using Library.Infrastructure.Data;
 using Library.Infrastructure.Repositories;
 using Library.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<LibraryDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConString")),
-    ServiceLifetime.Scoped);
+{
+    var connectionString = builder.Configuration.GetConnectionString("ConString");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+}, ServiceLifetime.Scoped);
 
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<AuthorService>();
