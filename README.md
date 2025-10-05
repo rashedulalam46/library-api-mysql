@@ -75,5 +75,26 @@ These are sample endpoints — adjust according to actual implementation.
 | DELETE | /api/books/{id} | Delete a book by ID     |  
 
 
+## 📦 Deployment
+
+When you’re ready to deploy:
+
+- Configure the production connection string in environment variables.
+- Publish the project:
+
+```
+dotnet publish --configuration Release
+```
+
+- Deploy the resulting output to your server / host / container.
+- Ensure the database is accessible and migrations are applied.
+
+##  📄 License & Contribution
+
+- Feel free to fork or suggest changes via pull requests.
+- Add a LICENSE file if you have specific usage terms.
+- Please document style, code conventions, etc., in a CONTRIBUTING.md.
+
+
 
 
