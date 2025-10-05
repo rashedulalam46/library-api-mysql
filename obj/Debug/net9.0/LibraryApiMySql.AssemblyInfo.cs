@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryApiMySql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a6b2cafc575cb156a262910a46c1a95c55e86bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fadf53122a2b6e9421df16deccf50ca6be4c464")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryApiMySql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryApiMySql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
