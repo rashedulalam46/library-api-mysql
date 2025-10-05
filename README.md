@@ -1,8 +1,7 @@
 # Library API (MySQL)
 
-A .NET Core Web API for managing a library system, using **MySQL** as the database.
-
-This project is analogous to your SQL Server version, but configured to use MySQL backend instead.  
+A .NET Core / .NET 9 Web API for managing a library system, backed by **MySQL**.
+This project is structured with clean architecture (Domain, Application, Infrastructure, API) and supports basic CRUD operations on books, authors, categories, publishers, etc.
 
 ---
 
@@ -46,5 +45,6 @@ This project is analogous to your SQL Server version, but configured to use MySQ
    ```bash
    git clone https://github.com/rashedulalam46/library-api-mysql.git
    cd library-api-mysql
+
 
 
