@@ -45,6 +45,35 @@ This project is structured with clean architecture (Domain, Application, Infrast
    ```bash
    git clone https://github.com/rashedulalam46/library-api-mysql.git
    cd library-api-mysql
+   ```
+
+## 📁 Repository Structure
+```
+LibraryApiSqlServer/
+├── Library.Api/                   # API / presentation layer (controllers, endpoints)
+├── Library.Application/           # Application logic
+│   ├── Services/                  # Business services / use cases
+│   └── DTOs/                      # Data Transfer Objects, ViewModels
+├── Library.Domain/                # Domain / core (entities, interfaces)
+├── Library.Infrastructure/        # Data access, repository implementations, EF Core, DB context
+├── LibraryApiSqlServer.sln
+├── Program.cs
+├── appsettings.json
+├── appsettings.Development.json
+└── README.md
+```
+
+ ## 🛣️ API Endpoints (Examples)
+
+These are sample endpoints — adjust according to actual implementation.
+| Method | URL             | Description             |
+| ------ | --------------- | ----------------------- |
+| GET    | /api/books      | Get all books           |
+| GET    | /api/books/{id} | Get book by ID          |
+| POST   | /api/books      | Create a new book       |
+| PUT    | /api/books/{id} | Update an existing book |
+| DELETE | /api/books/{id} | Delete a book by ID     |  
+
 
 
 
