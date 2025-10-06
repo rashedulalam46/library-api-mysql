@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<LibraryDbContext>(options =>
@@ -17,6 +16,7 @@ builder.Services.AddDbContext<LibraryDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 }, ServiceLifetime.Scoped);
 
+// Register repositories and services 
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<AuthorService>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
@@ -31,7 +31,7 @@ builder.Services.AddScoped<DropdownService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add CORS
+// Configure CORS for Blazor WebAssembly client, you can comments it if you are not using Blazor 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazor",
@@ -51,7 +51,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowBlazor");  // Add this before UseAuthorization()
+
+// Use CORS policy for Blazor WebAssembly client if you are not using Blazor you can comments it
+app.UseCors("AllowBlazor"); 
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
