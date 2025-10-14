@@ -40,12 +40,33 @@ This project is structured with clean architecture (Domain, Application, Infrast
 
 ### Steps
 
-1. **Clone the repository**
+**1. Clone the repository**
 
-   ```bash
-   git clone https://github.com/rashedulalam46/library-api-mysql.git
-   cd library-api-mysql
-   ```
+```bash
+git clone https://github.com/rashedulalam46/library-api-mysql.git
+cd library-api-mysql
+```
+**2. Configure connection string**
+   
+Open appsettings.json or appsettings.Development.json, and set up your ConnectionStrings:DefaultConnection to point to your SQL Server.
+
+```
+{
+  "ConnectionStrings": {
+    "ConString": "Server=YOUR_SERVER;Database=LibraryDb;User Id=…;Password=…;"
+  }
+}
+```
+
+If you are using Docker, then use
+
+```
+{
+  "ConnectionStrings": {
+    "ConString": "Server=host.docker.internal;Database=LibraryDb;User Id=…;Password=…;"
+  }
+}
+```
 
 ## 📁 Repository Structure
 ```
@@ -94,6 +115,7 @@ dotnet publish --configuration Release
 - Feel free to fork or suggest changes via pull requests.
 - Add a LICENSE file if you have specific usage terms.
 - Please document style, code conventions, etc., in a CONTRIBUTING.md.
+
 
 
 
