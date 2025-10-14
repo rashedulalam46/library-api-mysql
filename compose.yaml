@@ -1,5 +1,7 @@
 # Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
 
+version: "3.9"
+
 services:
   libraryapimysql:
     image: libraryapimysql
@@ -7,4 +9,10 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 5135:5135
+      - "5135:5135"
+    volumes:
+      - .:/app   # Mount your local project folder into the container
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1  # Optional: helps with hot reload on some systems
+    working_dir: /app
+
