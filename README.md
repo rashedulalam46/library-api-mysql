@@ -35,8 +35,9 @@ This project is structured with clean architecture (Domain, Application, Infrast
 
 - [.NET SDK](https://dotnet.microsoft.com/download) (version matching the project)  
 - MySQL Server (local or remote)  
-- A MySQL client / tool (e.g. MySQL Workbench, MyCLI)  
-- (Optional) Postman or HTTP client for testing  
+- A MySQL client / tool (e.g. MySQL Workbench, MyCLI)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) for containerized setup (Optional)
+- Postman or HTTP client for testing (Optional)   
 
 ### Steps
 
@@ -115,6 +116,7 @@ dotnet publish --configuration Release
 - Feel free to fork or suggest changes via pull requests.
 - Add a LICENSE file if you have specific usage terms.
 - Please document style, code conventions, etc., in a CONTRIBUTING.md.
+
 
 
 
