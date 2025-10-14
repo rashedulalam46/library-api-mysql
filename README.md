@@ -1,4 +1,4 @@
-# Library API (MySQL)
+# Library API (MySQL + Docker)
 
 A .NET Core / .NET 9 Web API for managing a library system, backed by **MySQL**.
 This project is structured with clean architecture (Domain, Application, Infrastructure, API) and supports basic CRUD operations on books, authors, categories, publishers, etc.
@@ -115,6 +115,7 @@ dotnet publish --configuration Release
 - Feel free to fork or suggest changes via pull requests.
 - Add a LICENSE file if you have specific usage terms.
 - Please document style, code conventions, etc., in a CONTRIBUTING.md.
+
 
 
 
